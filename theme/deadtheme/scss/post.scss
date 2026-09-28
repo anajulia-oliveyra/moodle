@@ -1,0 +1,1238 @@
+@font-face {
+    font-family: 'Rawline';
+    src: url('[[font:theme|rawline-400.ttf]]') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Rawline';
+    src: url('[[font:theme|rawline-600.ttf]]') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Rawline';
+    src: url('[[font:theme|rawline-700.ttf]]') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+:root{
+    --dead-primary: #0065a2;
+    --dead-secondary: #a3d869;
+    --dead-text: #333;
+    --dead-text-light: #666;
+    --dead-bg-page: #f4f6fb;
+    --dead-bg-card: #ffffff;
+    --dead-border: #e0e0e0;
+
+    --dead-font-heading: 'Rawline', sans-serif;
+    --dead-font-body: 'Rawline', sans-serif;
+
+    --dead-title-size: 28px;
+    --dead-substitle-size: 16px;
+    --dead-radius: 10px;
+    --dead-radius-lg: 12px;
+    --dead-section-gap: 50px;
+}
+
+body{
+    background-color: var(--dead-bg-page);
+    font-family: var(--dead-font-body);
+    color: var(--dead-text);
+}
+
+h2{
+    font-family: var(--dead-font-heading);
+    color: var(--dead-primary);
+}
+
+// ==========================================================
+// HEADER - GOV.BR DESIGN SYSTEM
+// ==========================================================
+
+.dead-gov-header {
+    --header-bg: #ffffff;
+    --header-border: #dddddd;
+    --header-primary: #1351b4;
+    --header-text: #333333;
+
+    width: 100%;
+    background: var(--header-bg);
+    border-bottom: 1px solid var(--header-border);
+
+    font-family: var(--dead-font-body);
+
+    position: relative;
+    z-index: 1000;
+}
+
+.dead-header-container {
+    width: 100%;
+}
+
+
+// ==========================================================
+// TOPO
+// ==========================================================
+
+.dead-header-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    min-height: 88px;
+
+    padding: 16px 24px;
+}
+
+
+// ==========================================================
+// IDENTIDADE UFVJM
+// ==========================================================
+
+.dead-header-logo {
+    display: flex;
+    align-items: center;
+
+    flex: 1;
+}
+
+.dead-header-brand {
+    display: flex;
+    align-items: center;
+
+    gap: 18px;
+
+    color: var(--header-text) !important;
+    text-decoration: none !important;
+}
+
+.dead-header-brand img {
+    width: auto;
+    max-width: 120px;
+    max-height: 48px;
+
+    object-fit: contain;
+}
+
+.dead-header-brand-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.dead-header-ministry {
+    font-size: 12px;
+    line-height: 1.2;
+
+    font-weight: 600;
+
+    color: #555;
+}
+
+.dead-header-title {
+    margin-top: 3px;
+
+    font-size: 24px;
+    line-height: 1.15;
+
+    font-weight: 700;
+
+    color: var(--header-primary);
+}
+
+
+// ==========================================================
+// AÇÕES
+// ==========================================================
+
+.dead-header-actions {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    gap: 12px;
+}
+
+.dead-header-links {
+    display: flex;
+    align-items: center;
+
+    gap: 20px;
+}
+
+.dead-header-action {
+    color: var(--header-primary) !important;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    text-decoration: none !important;
+
+    white-space: nowrap;
+}
+
+.dead-header-action:hover {
+    text-decoration: underline !important;
+}
+
+
+// ==========================================================
+// BUSCA
+// ==========================================================
+
+.dead-header-search {
+    display: flex;
+    align-items: center;
+
+    margin-left: 8px;
+}
+
+.dead-header-search .simplesearchform {
+    margin: 0;
+}
+
+.dead-header-search input {
+    min-width: 260px;
+
+    height: 40px;
+
+    border: 1px solid #888;
+    border-radius: 20px;
+
+    padding: 0 16px;
+}
+
+
+// ==========================================================
+// USUÁRIO / NOTIFICAÇÕES
+// ==========================================================
+
+.dead-header-user {
+    display: flex;
+    align-items: center;
+}
+
+.dead-header-user .usermenu > a,
+.dead-header-user .usermenu .nav-link {
+    color: var(--header-primary) !important;
+}
+
+.dead-header-actions .popover-region-toggle {
+    color: var(--header-primary) !important;
+}
+
+.dead-header-actions .langmenu {
+    color: var(--header-primary);
+}
+
+
+// ==========================================================
+// PARTE INFERIOR
+// ==========================================================
+
+.dead-header-bottom {
+    display: flex;
+    align-items: center;
+
+    min-height: 56px;
+
+    padding: 0 24px;
+
+    border-top: 1px solid #eeeeee;
+}
+
+
+// ==========================================================
+// MENU DO MOODLE
+// ==========================================================
+
+.dead-header-menu {
+    display: flex;
+    align-items: center;
+
+    flex: 1;
+}
+
+.dead-moodle-navigation {
+    display: flex;
+    align-items: center;
+}
+
+.dead-moodle-navigation .nav-link {
+    display: flex;
+    align-items: center;
+
+    min-height: 56px;
+
+    padding: 0 16px;
+
+    color: var(--header-primary) !important;
+
+    font-size: 16px;
+    font-weight: 500;
+
+    text-decoration: none !important;
+}
+
+.dead-moodle-navigation .nav-link:hover,
+.dead-moodle-navigation .nav-link:focus {
+    background-color: #eef3fb;
+
+    color: var(--header-primary) !important;
+}
+
+
+// ==========================================================
+// CATÁLOGO
+// ==========================================================
+
+.dead-header-catalog {
+    display: flex;
+    align-items: center;
+
+    min-height: 56px;
+
+    padding: 0 16px;
+
+    color: var(--header-primary) !important;
+
+    font-size: 16px;
+    font-weight: 600;
+
+    text-decoration: none !important;
+}
+
+.dead-header-catalog:hover {
+    background-color: #eef3fb;
+
+    color: var(--header-primary) !important;
+}
+
+
+// ==========================================================
+// MENU MOBILE
+// ==========================================================
+
+.dead-header-menu-button {
+    border: 0;
+
+    color: var(--header-primary) !important;
+}
+
+.dead-header-menu-button .navbar-toggler-icon {
+    filter: none;
+}
+
+
+// ==========================================================
+// DROPDOWNS DO MOODLE
+// ==========================================================
+
+.dead-gov-header .dropdown-menu {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, .12);
+}
+
+.dead-gov-header .dropdown-menu .dropdown-item {
+    color: var(--dead-text) !important;
+}
+
+.dead-gov-header .dropdown-menu .dropdown-item:hover {
+    background-color: #eef3fb;
+
+    color: var(--header-primary) !important;
+}
+
+
+// ==========================================================
+// RESPONSIVIDADE
+// ==========================================================
+
+@media (max-width: 991px) {
+
+    .dead-header-title {
+        font-size: 20px;
+    }
+
+    .dead-header-links {
+        display: none;
+    }
+
+    .dead-header-search input {
+        min-width: 200px;
+    }
+
+}
+
+
+@media (max-width: 767px) {
+
+    .dead-header-top {
+        min-height: 64px;
+
+        padding: 12px 16px;
+    }
+
+    .dead-header-brand img {
+        max-width: 80px;
+        max-height: 40px;
+    }
+
+    .dead-header-title {
+        font-size: 16px;
+    }
+
+    .dead-header-ministry {
+        font-size: 9px;
+    }
+
+    .dead-header-search {
+        display: none;
+    }
+
+    .dead-header-bottom {
+        min-height: 48px;
+
+        padding: 0 12px;
+    }
+
+    .dead-header-catalog {
+        min-height: 48px;
+
+        font-size: 14px;
+    }
+
+}
+
+.eskada-slider{
+    width: 100%;
+    height: 400px;
+}
+
+.eskada-slide{
+    display: none;
+    width: 100%;
+    height: 100%;
+}
+
+.eskada-slide.active{
+    display:block;
+}
+
+.eskada-slide img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.eskada-slider-nav{
+    display: none
+}
+
+.dead-areas-section{
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: var(--dead-section-gap);
+
+    h2{
+        margin-bottom: 8px;
+        font-size: var(--dead-title-size);
+        font-weight: 600;
+    }
+
+    .subtitle{
+        margin-bottom: 25px;
+        color: var(--dead-text-light);
+        font-size: var(--dead-substitle-size);
+    }
+}
+
+.dead-areas-grid{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 20px;
+}
+
+.dead-area-card{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 22px;
+    background-color: var(--dead-bg-card);
+    border: 1px solid var(--dead-border);
+    border-radius: var(--dead-radius);
+    text-decoration: none;
+    color: var(--dead-primary);
+    font-size: 16px;
+    font-weight: 500;
+    transition: transform 0.2s, box-shadow 0.2s;
+
+    &:hover{
+        transform: translateY(-3px);
+        box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+        text-decoration: none;
+    }
+}
+
+.dead-area-icon{
+    font-size: 28px;
+}
+
+.dead-featured-courses-grid{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 24px;
+    margin-top: 30px;
+}
+
+.dead-course-card{
+    background: var(--dead-bg-card);
+    border-radius: var(--dead-radius-lg);
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.dead-course-image{
+    height: 180px;
+    background: #e9ecef;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+
+    img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+}
+
+.dead-course-content{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+
+    h3{
+        margin: 0 0 8px;
+        color: var(--dead-primary);
+        font-size: 17px; /* era o padrão do h3, agora menor */
+        line-height: 1.3;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        min-height: 44px;
+    }
+    p{
+        margin: 0 0  20px;
+        color: var(--dead-text-light);
+        font-size: 14px;
+        flex: 1;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+
+
+}
+
+.dead-course-button{
+    display: inline-block;
+    margin-top: auto;
+    align-self: flex-start;
+    padding: 10px 18px;
+    border-radius: 6px;
+    text-decoration: none;
+    background-color: var(--dead-primary);
+    color: #fff;
+    font-weight: 500;
+
+    &:hover{
+        background-color: darken(#0065a2, 8%);
+        text-decoration: none;
+    }
+}
+
+.dead-why-section{
+    text-align: center;
+    padding: var(--dead-section-gap) 16px;
+    padding-bottom: 16px;;
+
+    h2{
+        font-size: var(--dead-title-size);
+    }
+}
+
+.dead-why-grid{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+    align-items: start;
+    margin-top: 24px;
+}
+
+.dead-why-card{
+    max-width: none;
+
+    h3{
+        margin-bottom: 8px;
+        color: var(--dead-primary);
+    }
+
+    p{
+        color: var(--dead-text-light);
+        font-size: 14px;
+    }
+}
+
+.dead-why-icon-wrap{
+    width: 64px;
+    height: 64px;
+    background-color: var(--dead-primary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 12px;
+}
+
+.dead-why-icon{
+    width: 30px;
+    height: 30px;
+    stroke: #fff;
+    fill: none;
+    stroke-width: 1.8;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.dead-cta-banner{
+    background: var(--dead-primary);
+    color: #fff;
+    text-align: center;
+    padding: var(--dead-section-gap) 16px;
+    margin: 32px 0;
+    border-radius: var(--dead-radius);
+
+    h2{
+        color: #fff;
+    }
+}
+
+.dead-cta-button{
+    display: inline-block;
+    background: #fff;
+    color: var(--dead-primary);
+    padding: 12px 32px;
+    border-radius: 6px;
+    font-weight: bold;
+    margin-top: 16px;
+    text-decoration: none;
+
+    &:hover{
+        background: var(--dead-secondary);
+        color: #fff;
+    }
+}
+
+.dead-faq-section{
+    max-width: 700px;
+    margin: var(--dead-section-gap) auto;
+    padding: 0 16px;
+    text-align: left;
+
+    h2{
+        font-size: var(--dead-title-size);
+    }
+}
+
+.dead-faq-item{
+    border-bottom: 1px solid var(--dead-border);
+    padding: 16px 0;
+
+    summary{
+        cursor: pointer;
+        font-weight: bold;
+        font-size: 16px;
+        list-style: none;
+        color: var(--dead-primary);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &::webkit-details-marker{
+            display: none;
+        }
+
+        &::after{
+            content: '+';
+        }
+    }
+
+    &[open] summary::after{
+        content: '-';
+    }
+
+    p{
+        margin-top: 8px;
+        color: var(--dead-text-light)
+    }
+}
+
+// ==========================================
+// CATÁLOGO DE CURSOS
+// ==========================================
+.dead-catalog-page {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 32px 16px;
+}
+
+.dead-catalog-header {
+    text-align: center;
+    margin-bottom: 32px;
+
+    h1 {
+        font-family: var(--dead-font-heading);
+        color: var(--dead-primary);
+        font-size: 32px;
+    }
+
+    .subtitle {
+        color: var(--dead-text-light);
+        margin-bottom: 20px;
+    }
+}
+
+.dead-catalog-search {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    max-width: 480px;
+    margin: 0 auto;
+
+    input {
+        flex: 1;
+        padding: 10px 14px;
+        border: 1px solid var(--dead-border);
+        border-radius: 6px;
+    }
+
+    button {
+        padding: 10px 20px;
+        background: var(--dead-primary);
+        color: #fff;
+        border: none;
+        border-radius: 6px;
+        font-weight: 500;
+        cursor: pointer;
+
+        &:hover {
+            background: darken(#0065a2, 8%);
+        }
+    }
+}
+
+.dead-catalog-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 32px;
+}
+
+.dead-filter-chip {
+    padding: 8px 16px;
+    border: 1px solid var(--dead-border);
+    border-radius: 20px;
+    text-decoration: none;
+    color: var(--dead-primary);
+    font-size: 14px;
+    background: #fff;
+    transition: all 0.2s;
+
+    &:hover {
+        background: var(--dead-bg-light);
+        text-decoration: none;
+    }
+
+    &.active {
+        background: var(--dead-primary);
+        color: #fff;
+        border-color: var(--dead-primary);
+    }
+}
+
+.dead-catalog-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    align-items: stretch;
+}
+
+.dead-course-noimage {
+    font-size: 40px;
+    opacity: 0.4;
+}
+
+.dead-catalog-empty {
+    text-align: center;
+    color: var(--dead-text-light);
+    padding: 40px 0;
+}
+
+.dead-catalog-pagination {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 40px;
+}
+
+.dead-page-link {
+    padding: 8px 14px;
+    border: 1px solid var(--dead-border);
+    border-radius: 6px;
+    text-decoration: none;
+    color: var(--dead-primary);
+
+    &:hover {
+        background: var(--dead-bg-light);
+        text-decoration: none;
+    }
+
+    &.active {
+        background: var(--dead-primary);
+        color: #fff;
+    }
+}
+
+@media (max-width: 768px) {
+    .dead-catalog-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.dead-course-tag {
+    display: inline-block;
+    background: var(--dead-bg-light);
+    color: var(--dead-primary);
+    font-size: 12px;
+    font-weight: 600;
+    padding: 4px 10px;
+    border-radius: 12px;
+    margin-bottom: 8px;
+}
+
+.dead-catalog-link {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding: 0 16px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    white-space: nowrap;
+    transition: background-color 0.2s;
+
+    &:hover {
+        color: #fff;
+        text-decoration: none;
+        background-color: rgba(255, 255, 255, 0.1);
+    }
+}
+
+// ==========================================
+// PÁGINA DE APRESENTAÇÃO DO CURSO (PREVIEW)
+// ==========================================
+.dead-preview-page {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 32px 16px;
+}
+
+.dead-preview-hero {
+    display: flex;
+    gap: 32px;
+    align-items: center;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+}
+
+.dead-preview-image {
+    flex: 1;
+    min-width: 280px;
+
+    img {
+        width: 100%;
+        border-radius: var(--dead-radius-lg);
+        display: block;
+    }
+}
+
+.dead-preview-info {
+    flex: 1;
+    min-width: 280px;
+
+    h1 {
+        font-family: var(--dead-font-heading);
+        color: var(--dead-primary);
+        font-size: 30px;
+        margin: 10px 0 20px;
+    }
+}
+
+.dead-preview-body {
+    margin-bottom: 40px;
+}
+
+.dead-preview-summary {
+    margin-bottom: 32px;
+
+    h2 {
+        font-family: var(--dead-font-heading);
+        color: var(--dead-primary);
+        font-size: 22px;
+        margin-bottom: 12px;
+    }
+
+    p {
+        color: var(--dead-text);
+        line-height: 1.6;
+    }
+}
+
+.dead-preview-topics {
+    h2 {
+        font-family: var(--dead-font-heading);
+        color: var(--dead-primary);
+        font-size: 22px;
+        margin-bottom: 12px;
+    }
+}
+
+.dead-topics-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    li {
+        padding: 14px 16px;
+        border: 1px solid var(--dead-border);
+        border-radius: 8px;
+        margin-bottom: 8px;
+        color: var(--dead-text);
+        font-weight: 500;
+
+        &::before {
+            content: '📖 ';
+        }
+    }
+}
+
+.dead-preview-footer-cta {
+    text-align: center;
+    padding: 32px 0;
+}
+
+.dead-preview-meta {
+    display: flex;
+    gap: 24px;
+    margin-bottom: 24px;
+    flex-wrap: wrap;
+}
+
+.dead-meta-item {
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+
+    strong {
+        display: block;
+        color: var(--dead-primary);
+        font-size: 14px;
+    }
+
+    p {
+        margin: 2px 0 0;
+        color: var(--dead-text-light);
+        font-size: 14px;
+    }
+}
+
+.dead-meta-icon {
+    font-size: 22px;
+}
+ 
+.dead-footer {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+
+    font-family: var(--dead-font-body);
+    color: #ffffff;
+}
+
+
+/* ---------- Área principal ---------- */
+
+.dead-footer-main {
+    width: 100%;
+    background-color: #0c326f;
+    padding: 40px 24px 32px;
+}
+
+.dead-footer-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+/* ---------- Identidade (logo + nome) ---------- */
+
+.dead-footer-brand {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+
+    padding-bottom: 32px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.dead-footer-logo-link {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    text-decoration: none;
+}
+
+.dead-footer-logo {
+    display: block;
+    width: auto;
+    max-width: 190px;
+    max-height: 75px;
+    object-fit: contain;
+}
+
+.dead-footer-brand-text {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.dead-footer-brand-text strong {
+    margin: 0;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.4;
+}
+
+.dead-footer-brand-text span {
+    color: #ffffff;
+    font-size: 15px;
+    line-height: 1.5;
+    opacity: 0.95;
+}
+
+
+/* ---------- Colunas de links ---------- */
+
+.dead-footer-links {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 32px;
+
+    padding-top: 28px;
+}
+
+.dead-footer-column h3 {
+    margin: 0 0 14px;
+
+    color: #ffffff;
+    font-family: var(--dead-font-heading);
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.4;
+}
+
+.dead-footer-column ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.dead-footer-column li {
+    margin: 0 0 10px;
+}
+
+
+/* ---------- Links (footer inteiro) ---------- */
+
+#page-footer.dead-footer a,
+#page-footer.dead-footer a:not([class]) {
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.5;
+    text-decoration: none;
+    background-color: transparent;
+
+    transition: color 0.15s ease;
+}
+
+#page-footer.dead-footer a:hover,
+#page-footer.dead-footer a:not([class]):hover,
+#page-footer.dead-footer a:focus,
+#page-footer.dead-footer a:not([class]):focus {
+    color: #ffcd07;
+    background-color: transparent;
+
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 4px;
+}
+
+#page-footer.dead-footer a:focus-visible {
+    outline: 3px solid #ffcd07;
+    outline-offset: 4px;
+    border-radius: 2px;
+}
+
+/* A logo não deve ganhar sublinhado no hover */
+#page-footer.dead-footer a.dead-footer-logo-link:hover,
+#page-footer.dead-footer a.dead-footer-logo-link:focus {
+    text-decoration: none;
+}
+
+
+/* ---------- Barra inferior ---------- */
+
+.dead-footer-bottom {
+    width: 100%;
+    background-color: #082653;
+    padding: 16px 24px;
+}
+
+.dead-footer-bottom-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+.dead-footer-copyright {
+    color: #ffffff;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+#page-footer.dead-footer .dead-footer-government a {
+    font-size: 13px;
+    font-weight: 600;
+}
+
+
+/* ---------- Itens do Moodle (login, tour, JS) ---------- */
+
+.dead-footer-moodle {
+    margin-top: 12px;
+    padding-top: 12px;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+
+    color: #ffffff;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.dead-footer-moodle .logininfo,
+.dead-footer-moodle .tool_usertours-resettourcontainer {
+    margin: 0;
+}
+
+#page-footer.dead-footer .dead-footer-moodle a {
+    font-size: 13px;
+    text-decoration: underline;
+}
+
+/* Só ocupa espaço quando o modo debug estiver ligado */
+.dead-footer-debug:empty {
+    display: none;
+}
+
+.dead-footer-debug {
+    max-width: 1200px;
+    margin: 12px auto 0;
+    color: #ffffff;
+}
+
+
+/* ---------- Tablet ---------- */
+
+@media (max-width: 900px) {
+
+    .dead-footer-links {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 28px 24px;
+    }
+
+}
+
+
+/* ---------- Mobile ---------- */
+
+@media (max-width: 600px) {
+
+    .dead-footer-main {
+        padding: 32px 20px 28px;
+    }
+
+    .dead-footer-brand {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 18px;
+        padding-bottom: 26px;
+    }
+
+    .dead-footer-logo {
+        max-width: 160px;
+        max-height: 65px;
+    }
+
+    .dead-footer-brand-text strong {
+        font-size: 16px;
+    }
+
+    .dead-footer-brand-text span {
+        font-size: 14px;
+    }
+
+    .dead-footer-links {
+        grid-template-columns: 1fr;
+        gap: 22px;
+        padding-top: 24px;
+    }
+
+    .dead-footer-bottom {
+        padding: 16px 20px;
+    }
+
+    .dead-footer-bottom-container {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 8px;
+    }
+}

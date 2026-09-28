@@ -1,0 +1,67 @@
+{{!
+    Catálogo de cursos
+}}
+<div class="dead-catalog-page">
+
+    <div class="dead-catalog-header">
+        <h1>Catálogo de Cursos</h1>
+        <p class="subtitle">{{totalcourses}} cursos disponíveis</p>
+
+        <form action="{{{searchurl}}}" method="get" class="dead-catalog-search">
+            <input type="text" name="q" placeholder="Buscar por nome do curso..." value="{{search}}">
+            <button type="submit">Buscar</button>
+        </form>
+    </div>
+
+    <div class="dead-catalog-filters">
+        <a href="{{{allareasurl}}}" class="dead-filter-chip {{#showallactive}}active{{/showallactive}}">
+            Todos
+        </a>
+        {{#areas}}
+        <a href="{{{url}}}" class="dead-filter-chip {{#active}}active{{/active}}">
+           {{name}}
+        </a>
+        {{/areas}}
+    </div>
+
+    <div class="dead-catalog-grid">
+        {{#courses}}
+        <div class="dead-course-card">
+            <div class="dead-course-image">
+        {{#image}}
+        <img src="{{image}}" alt="{{name}}">
+        {{/image}}
+        {{^image}}
+        <span class="dead-course-noimage">📚</span>
+        {{/image}}
+    </div>
+    <div class="dead-course-content">
+        {{#category}}
+        <span class="dead-course-tag">{{category}}</span>
+        {{/category}}
+        <h3>{{name}}</h3>
+        {{#hassummary}}
+        <p>{{summary}}</p>
+        {{/hassummary}}
+        {{^hassummary}}
+        <p>Curso</p>
+        {{/hassummary}}
+        <a href="{{{url}}}" class="dead-course-button">Ver curso</a>
+    </div>
+        </div>
+        {{/courses}}
+    </div>
+
+    {{^courses}}
+    <p class="dead-catalog-empty">Nenhum curso encontrado com esse filtro.</p>
+    {{/courses}}
+
+    {{#haspagination}}
+    <div class="dead-catalog-pagination">
+        {{#pagination}}
+        <a href="{{{url}}}" class="dead-page-link {{#active}}active{{/active}}">{{number}}</a>
+        {{/pagination}}
+    </div>
+    {{/haspagination}}
+
+</div>

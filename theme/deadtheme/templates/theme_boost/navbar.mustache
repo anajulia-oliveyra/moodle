@@ -1,0 +1,205 @@
+{{!
+    This file is part of Moodle - http://moodle.org/
+
+    Moodle is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+}}
+
+<header class="br-header dead-gov-header"
+        id="header"
+        data-sticky="data-sticky">
+
+    <div class="container-fluid dead-header-container">
+
+        {{! ===================================================== }}
+        {{! TOPO DO HEADER }}
+        {{! ===================================================== }}
+
+        <div class="header-top dead-header-top">
+
+            {{! Logo / identidade }}
+            <div class="header-logo dead-header-logo">
+
+                <a href="{{{ config.homeurl }}}"
+                   class="dead-header-brand"
+                   aria-label="{{sitename}}">
+
+                    <img src="{{config.wwwroot}}/theme/deadtheme/pix/dead-logo.png"
+                         alt="{{sitename}}">
+
+                    <div class="dead-header-brand-text">
+
+                        <span class="dead-header-ministry">
+                            MINISTÉRIO DA EDUCAÇÃO
+                        </span>
+
+                        <span class="dead-header-title">
+                            Diretoria de Educação Aberta e a Distância
+                        </span>
+
+                    </div>
+
+                </a>
+
+            </div>
+
+
+            {{! ================================================= }}
+            {{! AÇÕES DO HEADER }}
+            {{! ================================================= }}
+
+            <div class="header-actions dead-header-actions">
+
+
+                {{! Links institucionais }}
+
+                <div class="header-links dead-header-links">
+
+                    <a href="https://portal.ufvjm.edu.br/page/acesso-a-informacao"
+                       class="dead-header-action">
+
+                        Acesso à Informação
+
+                    </a>
+
+                    <a href="#"
+                       class="dead-header-action">
+
+                        Acessibilidade
+
+                    </a>
+
+                </div>
+
+
+                {{! Busca }}
+
+                {{#output.search_box}}
+
+                    <div class="dead-header-search">
+
+                        {{{output.search_box}}}
+
+                    </div>
+
+                {{/output.search_box}}
+
+
+                {{! Plugins Moodle: notificações, mensagens etc. }}
+
+                {{{output.navbar_plugin_output}}}
+
+
+                {{! Idioma }}
+
+                {{#langmenu}}
+
+                    <div class="dead-header-language">
+
+                        {{> theme_boost/language_menu }}
+
+                    </div>
+
+                {{/langmenu}}
+
+
+                {{! Usuário }}
+
+                <div class="dead-header-user"
+                     data-region="usermenu">
+
+                    {{#usermenu}}
+
+                        {{> core/user_menu}}
+
+                    {{/usermenu}}
+
+                </div>
+
+
+                {{! Alternância de edição }}
+
+                {{{output.edit_switch}}}
+
+            </div>
+
+        </div>
+
+
+        {{! ===================================================== }}
+        {{! PARTE INFERIOR DO HEADER }}
+        {{! ===================================================== }}
+
+        <div class="header-bottom dead-header-bottom">
+
+
+            {{! Menu mobile }}
+
+            <button class="navbar-toggler aabtn dead-header-menu-button
+                           d-block d-md-none"
+                    data-toggler="drawers"
+                    data-action="toggle"
+                    data-target="theme_boost-drawers-primary"
+                    type="button">
+
+                <span class="navbar-toggler-icon"></span>
+
+                <span class="sr-only">
+                    {{#str}}sidepanel, core{{/str}}
+                </span>
+
+            </button>
+
+
+            {{! Menu principal do Moodle }}
+
+            {{#primarymoremenu}}
+
+                <div class="header-menu dead-header-menu">
+
+                    <div class="dead-moodle-navigation">
+
+                        {{> core/moremenu}}
+
+                    </div>
+
+
+                    {{! Catálogo personalizado }}
+
+                    <a href="{{config.wwwroot}}/theme/deadtheme/catalog.php"
+                       class="dead-header-catalog">
+
+                        Catálogo de Cursos
+
+                    </a>
+
+                </div>
+
+            {{/primarymoremenu}}
+
+
+            {{! Menu específico da página }}
+
+            {{#output.page_heading_menu}}
+
+                <ul class="navbar-nav dead-page-heading-menu">
+
+                    {{{output.page_heading_menu}}}
+
+                </ul>
+
+            {{/output.page_heading_menu}}
+
+
+        </div>
+
+    </div>
+
+</header>
+
+
+{{! Menu lateral mobile do Moodle }}
+
+{{> theme_boost/primary-drawer-mobile }}

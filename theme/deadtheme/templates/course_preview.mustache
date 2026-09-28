@@ -1,0 +1,66 @@
+{{!
+    Página de apresentação do curso (preview, antes da matrícula)
+}}
+<div class="dead-preview-page">
+
+    <div class="dead-preview-hero">
+        {{#hasimage}}
+        <div class="dead-preview-image">
+            <img src="{{image}}" alt="{{coursename}}">
+        </div>
+        {{/hasimage}}
+
+        <div class="dead-preview-info">
+    {{#hascategory}}
+    <span class="dead-course-tag">{{category}}</span>
+    {{/hascategory}}
+    <h1>{{coursename}}</h1>
+
+    <div class="dead-preview-meta">
+        {{#hascargahoraria}}
+        <div class="dead-meta-item">
+            <span class="dead-meta-icon">⏱️</span>
+            <div>
+                <strong>Carga horária</strong>
+                <p>{{cargahoraria}}</p>
+            </div>
+        </div>
+        {{/hascargahoraria}}
+
+        {{#haspublicoalvo}}
+        <div class="dead-meta-item">
+            <span class="dead-meta-icon">👥</span>
+            <div>
+                <strong>Público-alvo</strong>
+                <p>{{publicoalvo}}</p>
+            </div>
+        </div>
+        {{/haspublicoalvo}}
+    </div>
+    </div>
+
+    <div class="dead-preview-body">
+
+        <div class="dead-preview-summary">
+            <h2>Sobre o curso</h2>
+            {{{summary}}}
+        </div>
+
+        {{#hastopics}}
+        <div class="dead-preview-topics">
+            <h2>Conteúdo do curso</h2>
+            <ul class="dead-topics-list">
+                {{#topics}}
+                <li>{{name}}</li>
+                {{/topics}}
+            </ul>
+        </div>
+        {{/hastopics}}
+
+    </div>
+
+    <div class="dead-preview-footer-cta">
+        <a href="{{{enrolurl}}}" class="dead-cta-button">{{buttontext}}</a>
+    </div>
+
+</div>

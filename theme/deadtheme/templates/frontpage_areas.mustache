@@ -1,0 +1,137 @@
+{{!
+    Front page - Áreas de conhecimento
+}}
+
+<div class="dead-why-section">
+  <h2>Por que estudar com a gente</h2>
+  <div class="dead-why-grid">
+
+    <div class="dead-why-card">
+      <div class="dead-why-icon-wrap">
+        <svg class="dead-why-icon" viewBox="0 0 24 24">
+          <circle cx="12" cy="12" r="9"/>
+          <path d="M3 12h18"/>
+          <path d="M12 3c2.5 2.5 4 5.5 4 9s-1.5 6.5-4 9c-2.5-2.5-4-5.5-4-9s1.5-6.5 4-9z"/>
+        </svg>
+      </div>
+      <h3>100% Online</h3>
+      <p>Estude quando e onde quiser, no seu próprio ritmo, sem horários fixos ou prazos rígidos.</p>
+    </div>
+
+    <div class="dead-why-card">
+      <div class="dead-why-icon-wrap">
+        <svg class="dead-why-icon" viewBox="0 0 24 24">
+  <path d="M12 2v20"/>
+  <path d="M17 6.5c0-1.9-2.2-3.5-5-3.5s-5 1.6-5 3.5S9.2 10 12 10s5 1.6 5 3.5-2.2 3.5-5 3.5-5-1.6-5-3.5"/>
+  <line x1="4" y1="20" x2="20" y2="4"/>
+</svg>
+      </div>
+      <h3>Gratuito</h3>
+      <p>Cursos livres sem custo nenhum para você.</p>
+    </div>
+
+    <div class="dead-why-card">
+      <div class="dead-why-icon-wrap">
+        <svg class="dead-why-icon" viewBox="0 0 24 24">
+          <path d="M8 3h8a1 1 0 0 1 1 1v14l-5-3-5 3V4a1 1 0 0 1 1-1z"/>
+          <path d="M9 8h6"/>
+          <path d="M9 11h6"/>
+        </svg>
+      </div>
+      <h3>Certificação UFVJM</h3>
+      <p>Certificados verificáveis emitidos e reconhecidos pela Universidade Federal dos Vales do Jequitinhonha e Mucuri.</p>
+    </div>
+
+  </div>
+</div>
+
+<div class="dead-areas-section">
+  <h2>Explore por área do conhecimento</h2>
+  <p class="subtitle">Encontre o curso ideal para você</p>
+  <div class="dead-areas-grid">
+    {{#areas}}
+    <a class="dead-area-card" href="{{url}}">
+      {{name}}
+    </a>
+    {{/areas}}
+  </div>
+</div>
+
+
+<div class="dead-featured-courses">
+
+  <h2>Cursos em destaque</h2>
+  <p class="subtitle">Confira alguns dos cursos disponíveis</p>
+
+  <div class="dead-featured-courses-grid">
+
+    {{#featuredCourses}}
+
+    <div class="dead-course-card">
+
+		<div class="dead-course-image">
+		{{#image}}
+    		<img src="{{image}}" alt="{{name}}">
+		{{/image}}
+		{{^image}}
+    		<span class="dead-course-noimage">📚</span>
+		{{/image}}
+		</div>
+
+      <div class="dead-course-content">
+
+        <h3>{{name}}</h3>
+
+        <p>{{summary}}</p>
+
+        <a href="{{url}}" class="dead-course-button">
+          Ver curso
+        </a>
+
+      </div>
+
+    </div>
+
+    {{/featuredCourses}}
+
+  </div>
+
+</div>
+
+<div class="dead-cta-banner">
+	<h2>Pronto para começar sua jornada?</h2>
+	<p>Explore nosso catálogo e comece a estudar hoje mesmo, gratuitamente</p>
+	<a href="{{{catalogurl}}}" class="dead-cta-button">Comece agora</a>
+</div>
+
+<div class = "dead-faq-section">
+  <h2>Perguntas frequentes</h2>
+
+  <details class = "dead-faq-item">
+    <summary>Qual a duração dos cursos?</summary>
+    <p>Cada curso tem uma carga horária específica, disponível na página de inscrição. A duração vai depender da disponibilidade de tempo do aluno para acompanhar as aulas na plataforma.</p>
+  </details>
+
+  <details class = "dead-faq-item">
+    <summary>Os cursos têm horário fixo? Preciso estar logado em determinado horário?</summary>
+    <p>Os cursos ficam disponíveis durante 24 horas por dia, 7 dias por semana. Dessa forma, o aluno pode acessar o curso de acordo com o tempo que tem disponível.</p>
+  </details>
+
+   <details class = "dead-faq-item">
+    <summary>Posso fazer mais de um curso ao mesmo tempo? Existe limite na quantidade de cursos que posso fazer?</summary>
+    <p>Sim, você pode fazer quantos cursos desejar ao mesmo tempo. O acompanhamento vai depender da disponibilidade do aluno. Mas é possível fazer a inscrição em quantos cursos o aluno desejar.</p>
+  </details>
+
+  <details class = "dead-faq-item">
+    <summary>O curso tem algum pré-requisito específico ou qualquer pessoa pode fazer?</summary>
+    <p>Os cursos são abertos, não existe escolaridade mínima e qualquer pessoa pode fazer.</p>
+  </details>
+
+  <details class = "dead-faq-item">
+    <summary>Como é feita a certificação do curso?</summary>
+    <p>A certificação é disponibilizada em uma página na própria plataforma, assim que o curso for concluído e as avaliações finalizadas.</p>
+  </details>
+
+  
+
+

@@ -1,0 +1,129 @@
+{{!
+    This file is part of Moodle - http://moodle.org/
+
+    Moodle is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+}}
+{{!
+    Footer do deadtheme.
+
+    Este arquivo SOBRESCREVE o theme_boost/footer (mesmo esquema do navbar.mustache),
+    então vale para TODAS as páginas do site, sem precisar mexer no drawers.mustache.
+
+    ATENÇÃO - NÃO REMOVER o bloco "dead-footer-moodle" (fica na barra inferior).
+    Nele estão output.standard_footer_html e output.standard_end_of_body_html.
+    A segunda é a que injeta TODO o JavaScript da página (menus, drawers, slider,
+    dropdown do usuário, modo de edição...). Sem ela o tema "desconfigura".
+
+    NUNCA escreva chaves duplas de mustache dentro de um comentário como este:
+    o comentário fecha na primeira sequência de duas chaves e o resto vira texto na página.
+}}
+
+<footer id="page-footer" class="dead-footer">
+
+    <div class="dead-footer-main">
+
+        <div class="dead-footer-container">
+
+            {{! Identidade institucional }}
+            <div class="dead-footer-brand">
+
+                <a href="{{{ config.wwwroot }}}" class="dead-footer-logo-link">
+                    <img
+                        src="{{{ config.wwwroot }}}/theme/deadtheme/pix/dead-logo.png"
+                        alt="DEAD- Diretoria de Educação Aberta e a Distância"
+                        class="dead-footer-logo">
+                </a>
+
+                <div class="dead-footer-brand-text">
+                    <strong>Diretoria de Educação Aberta e a Distância</strong>
+                </div>
+
+            </div>
+
+
+            {{! Links institucionais }}
+            <div class="dead-footer-links">
+
+                <div class="dead-footer-column">
+                    <h3>Institucional</h3>
+                    <ul>
+                        <li><a href="https://ead.ufvjm.edu.br/">Sobre a Dead</a></li>
+                        <li><a href="https://portal.ufvjm.edu.br/">Sobre a UFVJM</a></li>
+                    </ul>
+                </div>
+
+                <div class="dead-footer-column">
+                    <h3>Acesso rápido</h3>
+                    <ul>
+                        <li><a href="{{{ config.wwwroot }}}">Início</a></li>
+                        <li><a href="{{{ config.wwwroot }}}/theme/deadtheme/catalog.php">Catálogo de Cursos</a></li>
+                        {{! "isloggedin" não existe no contexto do mustache (o bloco nunca aparecia).
+                            Se a pessoa não estiver logada, o Moodle redireciona para o login. }}
+                        <li><a href="{{{ config.wwwroot }}}/my/courses.php">Meus cursos</a></li>
+                        <li><a href="{{{ config.wwwroot }}}/my/">Painel</a></li>
+                    </ul>
+                </div>
+
+                <div class="dead-footer-column">
+                    <h3>Redes sociais</h3>
+                    <ul>
+                        <li>
+                            <a href="https://www.instagram.com/eadufvjmoficial/"
+                               target="_blank"
+                               rel="noopener noreferrer">Instagram</a>
+                        </li>
+<li>
+                            <a href="https://www.youtube.com/@ead-ufvjm"
+                               target="_blank"
+                               rel="noopener noreferrer">Youtube</a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    {{! Barra inferior }}
+    <div class="dead-footer-bottom">
+
+        <div class="dead-footer-container dead-footer-bottom-container">
+
+            <div class="dead-footer-copyright">
+                © UFVJM — Universidade Federal dos Vales do Jequitinhonha e Mucuri
+            </div>
+
+            <div class="dead-footer-government">
+                <a href="https://www.gov.br/" target="_blank" rel="noopener noreferrer">Governo Federal</a>
+            </div>
+
+        </div>
+
+        {{! Itens exigidos pelo Moodle: login, reset de tour e JavaScript da página }}
+        <div class="dead-footer-container dead-footer-moodle">
+
+            <div class="logininfo">
+                {{{ output.login_info }}}
+            </div>
+
+            <div class="tool_usertours-resettourcontainer"></div>
+
+            {{{ output.standard_footer_html }}}
+
+            {{{ output.standard_end_of_body_html }}}
+
+        </div>
+
+        <div class="dead-footer-debug">
+            {{{ output.debug_footer_html }}}
+        </div>
+
+    </div>
+
+</footer>
